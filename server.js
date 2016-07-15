@@ -1,4 +1,3 @@
-// used to serve things dynamically
 var express = require('express');
 var server = express();
 
