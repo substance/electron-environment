@@ -1,0 +1,58 @@
+@header-height: 50px;
+@header-color: #3B4749;
+@default-padding: 30px;
+@title-font-size: 36px;
+@default-font-size: 20px;
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  max-width: 800px;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  min-height: @header-height;
+  background: @header-color;
+  color: white;
+  padding: @default-padding;
+  position: relative;
+
+  > .title {
+    font-size: @title-font-size;
+  }
+
+  > .nav-menu {
+    position: absolute;
+    top: 0px; right: 0px;
+  }
+}
+
+button {
+  font-size: @default-font-size;
+
+  > a {
+    cursor: default;
+    text-decoration: initial;
+    color: initial;
+  }
+}
+
+.page-body {
+  min-height: 400px;
+  padding: @default-padding;
+  background: #eee;
+  font-size: @default-font-size;
+  line-height: 25px;
+}
+
+.page-footer {
+  padding: @default-padding;
+  min-height: @header-height;
+  background: #ccc;
+}
+

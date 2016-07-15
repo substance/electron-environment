@@ -1,0 +1,23 @@
+{
+  "name": "weight-watch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "browserify": "substance/node-browserify#d3caeb6dcdaa97a258d099c7231a57f0f60ec876",
+    "electron-prebuilt": "^1.2.7",
+    "express": "^4.14.0",
+    "font-awesome": "^4.6.3",
+    "less": "^2.7.1",
+    "mime-types": "github:jshttp/mime-types"
+  }
+}

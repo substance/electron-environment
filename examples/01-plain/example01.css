@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.page-header {
+  min-height: 50px;
+  background: #3B4749;
+  color: white;
+  padding: 30px;
+}
+
+.page-header #back-link {
+  color: white;
+}
+
+.page-header .title {
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+.page-body {
+  min-height: 400px;
+  background: #eee;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.page-footer {
+  min-height: 50px;
+  background: #ccc;
+  padding: 30px;
+  font-size: 18px;
+}

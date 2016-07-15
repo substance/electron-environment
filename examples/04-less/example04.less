@@ -1,0 +1,59 @@
+// variables are useful
+@header-height: 50px;
+@header-color: #3B4749;
+@default-padding: 30px;
+@title-font-size: 36px;
+@default-font-size: 20px;
+
+// learn more about Less here: http://lesscss.org
+// particularly very useful is the possibility to break
+// your css up into several files using @import
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.page-header {
+  min-height: @header-height;
+  background: @header-color;
+  color: white;
+  padding: @default-padding;
+  position: relative;
+
+  // We can nest selectors --
+  // definitely more convenient than in regular CSS
+  > .title {
+    font-size: @title-font-size;
+  }
+
+  > .nav-menu {
+    position: absolute;
+    top: 0px; right: 0px;
+  }
+
+}
+
+button {
+  font-size: @default-font-size;
+
+  > a {
+    cursor: default;
+    text-decoration: initial;
+    color: initial;
+  }
+}
+
+.page-body {
+  min-height: 400px;
+  padding: @default-padding;
+  background: #eee;
+  font-size: @default-font-size;
+  line-height: 25px;
+}
+
+.page-footer {
+  padding: @default-padding;
+  min-height: @header-height;
+  background: #ccc;
+}

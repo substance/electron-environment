@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Example: simple</title>
+    <link rel="stylesheet" type="text/css" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="example02.css">
+    <script type="text/javascript">
+      // this is called once the page is loaded
+      window.onload = function() {
+        // get DOM elements with document.querySelector(cssSelector)
+        var navButton = document.querySelector('#nav-button');
+        // this way you can register for a certain DOM event
+        navButton.addEventListener('click', function() {
+          alert('Clicked on #nav-button');
+        });
+      }
+    </script>
+  </head>
+  <body>
+
+    <div class="page-header">
+      <div class="title">Example: <code>simple</code></div>
+      <div class="nav-menu">
+        <button><a href="/"><i class="fa fa-home"></i></a></button>
+        <button id="nav-button"><i class="fa fa-bars"></i></button>
+      </div>
+    </div>
+
+    <div class="page-body">
+      This is a pretty simple example. Still it needs some techniques to achieve just these basics:
+      <ul>
+        <li><a href="http://substance.io">SUBSTANCE</a></li>
+        <li><code>window.onload</code>: used to do things with Javascript after the page has been loaded</li>
+        <li><code>document.querySelector()</code>: used to select an element present in the DOM. Used with the same syntax as CSS rules are applied. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">Document.querySelector()</a> and <a href="https://developer.mozilla.org/en/docs/Web/Guide/CSS/Getting_started/Selectors">Selectors</a> for details.</li>
+        <li><code>el.addEventListener()</code>: used to register to DOM events, such as a click. There is a bunch of events available: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Web/Events</a> In general <a href="https://developer.mozilla.org">https://developer.mozilla.org</a> is the best reference for HTML and Javascript.</li>
+        <li><code>postion: relative</code> and <code>postion: absolute</code>: used to render an element out of the flow. The nearest element with <code>postion: relative</code> defines the rectangle in which the element is positioned using a combination of <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code></li>
+        <li>FontAwesome icons: a nice set of icons available for free that can be used for buttons and such. You need to include a font-awesome CSS and use it such as in <code>&lti class="fa fa-home"&gt&lt/i&gt</code>. Find all available icons <a href="http://fontawesome.io/icons">here</a></li>
+      </ul>
+    </div>
+
+    <div class="page-footer">
+      <p>Information like link to impressum or such go into the footer</p>
+    </div>
+
+  </body>
+</html>

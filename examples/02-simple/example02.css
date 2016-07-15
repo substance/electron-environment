@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.page-header {
+  min-height: 50px;
+  background: #3B4749;
+  color: white;
+  padding: 30px;
+
+  /*
+    'relative' is used only to define a new anchor
+    for 'absolute' positioned elements
+  */
+  position: relative;
+}
+
+.page-header > .title {
+  font-size: 36px;
+}
+
+.page-header .nav-menu {
+  position: absolute;
+  top: 0px; right: 0px;
+}
+
+button {
+  font-size: 20px;
+}
+
+button > a {
+  cursor: default;
+  text-decoration: initial;
+  color: initial;
+}
+
+.page-body {
+  min-height: 400px;
+  padding: 30px;
+  background: #eee;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.page-footer {
+  padding: 30px;
+  min-height: 50px;
+  background: #ccc;
+}
