@@ -20,9 +20,9 @@ body {
   font-size: 36px;
 }
 
-.page-header .nav-menu {
+.nav-menu {
   position: absolute;
-  top: 0px; right: 0px;
+  top: 30px; right: 30px;
 }
 
 button {

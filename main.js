@@ -35,7 +35,7 @@ function createWindow(url) {
   });
   win.loadURL(url);
   // Open the DevTools?
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   // it is important to dereference the created window object
   win.on('closed', function() {
     win = null;
