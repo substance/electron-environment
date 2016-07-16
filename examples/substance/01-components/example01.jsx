@@ -1,10 +1,8 @@
-'use strict';
-
 import Component from 'substance/ui/Component'
-import MainPage from './main-page/MainPage'
-import sendRequest from '../../../lib/sendRequest'
+import sendRequest from 'substance/util/sendRequest'
 
-export default
+import MainPage from './MainPage'
+
 class App extends Component {
 
   getInitialState() {
@@ -27,9 +25,11 @@ class App extends Component {
   }
 
   render($$) {
-    let el = $$('div').addClass('sc-app')
-    el.append($$(MainPage, { items: this.state.items }))
-    return el
+    return (
+      <div class="sc-app">
+        <MainPage items={this.state.items} />
+      </div>
+    )
   }
 
 }
