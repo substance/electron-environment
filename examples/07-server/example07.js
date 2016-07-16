@@ -1,23 +1,16 @@
 /*eslint-disable no-alert */
+var sendRequest = require('../../lib/sendRequest');
 
 window.addEventListener('load', function() {
   var reqButton = document.querySelector('#request-button');
   reqButton.addEventListener('click', function() {
-    sendRequest();
+    var url = "http://localhost:4444/api/helloworld";
+    sendRequest({ method: 'GET', url: url })
+      .then(function(data) {
+        alert("Received data: " + data);
+      })
+      .catch(function(err) {
+        alert("Request failed: " + err);
+      });
   });
 });
-
-function sendRequest() {
-  var xmlhttp = new XMLHttpRequest();
-
-  xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-      var responseText = xmlhttp.responseText;
-      alert("Received response from server: " + responseText);
-    }
-  };
-
-  var url = "http://localhost:4444/api/helloworld";
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
-}

@@ -81,6 +81,6 @@ app.on('activate', function() {
 });
 
 // this is used by client-server examples
-var server = require('./server');
+var server = require('./server/server');
 var PORT = 4444;
 server.listen(PORT);
