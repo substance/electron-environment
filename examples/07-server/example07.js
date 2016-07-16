@@ -1,5 +1,6 @@
+var sendRequest = require('substance/util/sendRequest');
+
 /*eslint-disable no-alert */
-var sendRequest = require('../../lib/sendRequest');
 
 window.addEventListener('load', function() {
   var reqButton = document.querySelector('#request-button');
