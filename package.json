@@ -18,11 +18,10 @@
     "babel-plugin-transform-es2015-modules-commonjs-simple": "^6.7.4",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babelify": "^7.3.0",
-    "browserify": "substance/node-browserify#d3caeb6dcdaa97a258d099c7231a57f0f60ec876",
     "electron-prebuilt": "^1.2.7",
+    "electron-utils": "github:substance/electron-utils",
     "express": "^4.14.0",
     "font-awesome": "^4.6.3",
-    "less": "^2.7.1",
-    "mime-types": "github:jshttp/mime-types"
+    "less": "^2.7.1"
   }
 }

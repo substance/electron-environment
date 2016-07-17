@@ -11,13 +11,14 @@ var electron = require('electron');
 // asking configured hook to handle the file request
 // and falling back to just serve the plain file if no hook has
 // handled the request
-var FileHooks = require('./lib/FileHooks');
+var fileUtils = require('electron-utils/file');
+var FileHooks = fileUtils.FileHooks;
 // bundles js files using browserify
-var BrowserifyHook = require('./lib/BrowserifyHook');
+var BrowserifyHook = fileUtils.BrowserifyHook;
 // compiles a less file into css
-var LessHook = require('./lib/LessHook');
+var LessHook = fileUtils.LessHook;
 // provides convenient access to packages in node_modules
-var VendorHook = require('./lib/VendorHook');
+var VendorHook = fileUtils.VendorHook;
 
 var app = electron.app;
 var protocol = electron.protocol;
@@ -46,7 +47,11 @@ app.on('ready', function() {
   new FileHooks({
     rootDir: __dirname,
     hooks: [
-      new BrowserifyHook(),
+      new BrowserifyHook({
+        es6: true,
+        jsx: true,
+        cache: true
+      }),
       new LessHook(),
       new VendorHook()
     ]
