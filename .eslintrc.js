@@ -14,7 +14,7 @@ module.exports = {
   "plugins": [ "react" ],
   "extends": "eslint:recommended",
   "globals": {
-    "QUnit": true
+    "Promise": true
   },
   "rules": {
     "react/jsx-uses-react": [2, { "pragma": "$$" }],
